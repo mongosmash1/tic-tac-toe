@@ -42,8 +42,8 @@ body {
 
 // game board styling
 .cell {
-  height: 30% !important;
-  font-size: 3rem !important;
+  height: 20vh;
+  font-size: 14vh;
 }
 a {
   color: black;
