@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Tic Tac Toe</title>
+  <meta name="description" content="The Game of Tic Tac Toe">
+  <meta name="author" content="Scott Holden">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/montreal" type="text/css"/>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/risestarhand" type="text/css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+
+<body>
+<!-- modal -->
+<div class="modal fade" id="game-status" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" id="play-again">Play Again!</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- main body -->
+<div class="container main">
+  <div class="row">
+    <div class="title col text-center">
+      TIC TAC TOE
+    </div>
+  </div>
+  <!-- buttons -->
+  <div class="row">
+    <div class="col text-center">
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-info" id="1players">
+          <input type="radio" name="options" autocomplete="off">1 Players
+       </label>
+        <label class="btn btn-info" id="2players">
+         <input type="radio" name="options" autocomplete="off">2 Players
+        </label>
+      </div>
+      <div class="btn-group btn-group-toggle disabled" data-toggle="buttons">
+        <label class="btn btn-info" id="X">
+          <input type="radio" name="options" autocomplete="off">X
+       </label>
+        <label class="btn btn-info" id="O">
+         <input type="radio" name="options" autocomplete="off">O
+        </label>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-success" id="start">Start</button>
+        <button type="button" class="btn btn-danger" id="reset">Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="board container text-center">
+    <div class="row blue-bg">
+      <!-- stats -->
+      <div class="col-7" style="margin-top: 15px;">
+        <table class="table table-sm">
+          <thead class="head">
+            <tr>
+              <th class="no-border">&nbsp</th>
+              <th>player 1</th>
+              <th>player 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="head text-right">piece</th>
+              <td id="p1">X</td>
+              <td id="p2">O</td>
+            </tr>
+            <tr>
+              <th class="head text-right">wins</th>
+              <td id="wins">0</td>
+              <td id="loss">0</td>
+            </tr>
+            <tr>
+              <th class="head text-right">ties</th>
+              <td id="ties">0</td>
+            </tr>
+            <tr>
+              <th class="head text-right">games</th>
+              <td id="games">0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- status message -->
+      <div class="col-5 text-center" id="message">
+        <span class="span">choose no. of players</span>
+      </div>
+    </div>
+    <!--  game board -->
+    <div id="grid">
+      <div class="row">
+        <div class="cell grid-bottom grid-right col" id="0">
+          <a href=#></a>
+        </div>
+        <div class="cell grid-bottom grid-right col" id="1">
+          <a href=#></a>
+        </div>
+        <div class="cell grid-bottom col" id="2">
+          <a href=#></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell grid-bottom grid-right col" id="3">
+          <a href=#></a>
+        </div>
+        <div class="cell grid-bottom grid-right col" id="4">
+          <a href=#></a>
+        </div>
+        <div class="cell grid-bottom col" id="5">
+          <a href=#></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell grid-right col" id="6">
+          <a href=#></a>
+        </div>
+        <div class="cell grid-right col" id="7">
+          <a href=#></a>
+        </div>
+        <div class="cell col" id="8">
+          <a href=#></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+<!-- footer -->
+  </div>
+  <div class="row">
+    <div class="footer col text-center">
+      Coded by Scott Holden
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="scripts/script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
