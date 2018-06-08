@@ -1,0 +1,173 @@
+//decrease size for small screens
+@media (max-width: 767.98px) {
+  .main {
+    min-width: 400px;
+    max-width: 400px;
+    -webkit-transform: scale(.8);
+    -webkit-transform-origin: center top;
+    -moz-transform: scale(.8);
+    -moz-transform-origin: center top;
+    -ms-transform: scale(.8);
+    -ms-transform-origin: center top;
+    -o-transform: scale(.8);
+    -o-transform-origin: center top;
+    transform: scale(.8);
+    transform-origin: center top;
+  }
+}
+//outlines all divs to troubleshoot layout issues
+// div[class*='col'] {
+//   outline: 1px solid red;
+// }
+
+body {
+  background: black;
+  color: white;
+  font-family: Montreal;
+}
+
+.main {
+  width: 60vh;
+  margin-top: 25px;
+  color: white;
+}
+
+.board {
+  width: 100%;
+  color: black;
+  font-family: 'RiseStarHandSemibold';
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%230029ff' fill-opacity='0.30'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+// game board styling
+.cell {
+  height: 20vh;
+  font-size: 14vh;
+}
+a {
+  color: black;
+}
+#grid {
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.grid-bottom {
+  border-bottom: 5px solid black;
+}
+.grid-right {
+  border-right: 5px solid black;
+}
+
+//makes game board cells clickable
+.cell a {
+  position: absolute;
+  color: rgb(23, 162, 184);
+  width: 95%;
+  height: 95%;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+}
+.cell a:hover {
+  color: rgb(23, 162, 184);
+  text-decoration: none;
+}
+.cell a:active {
+  text-decoration: none;
+}
+
+// footer styling
+.footer {
+  padding-top: 25px;
+  padding-bottom: 15px;
+  font-family: Montreal;
+  font-size: 2vh;
+}
+
+// title styling
+.title {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: Montreal;
+  font-size: 4vh;
+  font-weight: bold;
+}
+
+// button styling
+.btn {
+  border: 2px solid black;
+}
+.btn-group.disabled label.btn {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+label {
+  margin-bottom: 0;
+}
+
+// stats table styling
+.table {
+  font-size: 1em;
+  margin-bottom: 0;
+  line-height: 1em;
+  margin-bottom: 15px;
+}
+.head {
+  background-color: rgb(23, 162, 184);
+  font-weight: bold;
+  color: white;
+}
+th {
+  border: 4px solid black !important;
+}
+th.no-border {
+  border-top: 0 !important;
+  border-left: 0 !important;
+}
+td {
+  border: 4px solid black !important;
+  background: white;
+  color: black;
+}
+
+// status message styling
+#message {
+  margin-top: 15px;
+  line-height: 1em;
+  font-size: 4vh;
+}
+.span {
+  font-size: 3vh;
+  position: absolute;
+  top: 45%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.blue-bg {
+  background-color: rgb(23, 162, 184);
+  color: white;
+  margin-bottom: 15px;
+  border-top: 6px solid black;
+  border-bottom: 8px solid black;
+}
+
+//modal styling
+.modal-header {
+  background-color: rgb(23, 162, 184);
+  font-weight: bold;
+  color: white;
+}
+.modal-title {
+  margin: 0 auto;
+}
+.modal-dialog-centered {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  align-items:center;
+  min-height:calc(100% - (.5rem * 2));
+}
